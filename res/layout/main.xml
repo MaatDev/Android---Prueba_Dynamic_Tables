@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout 
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:weightSum="2"    
+    >
+        <Button
+            android:layout_height="wrap_content"
+        	android:layout_width="0px" 
+        	android:layout_weight="1"
+        	android:text="@string/add"
+        	android:onClick="addRow"   
+        />
+        
+        <Button
+            android:layout_height="wrap_content"
+        	android:layout_width="0px"
+        	android:layout_weight="1" 
+        	android:text="@string/delete"
+        	android:onClick="deleteRow"   
+        />
+        
+        
+    </LinearLayout>
+    
+    <ScrollView
+    	android:layout_width="match_parent"
+    	android:layout_height="match_parent"    
+    >
+        
+        <TableLayout
+            android:id="@+id/tl_data" 
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        >
+            
+        	<TableRow 
+        		android:id="@+id/tr_header"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:weightSum="4"
+        	>
+        	
+        	    <TextView 
+        	    	android:id="@+id/tv_col1"
+        	    	android:layout_width="0px"
+        	    	android:layout_height="wrap_content"
+        	    	android:layout_weight="1" 
+        	    	android:text="ID"
+        	    />
+        	    
+        	    <TextView 
+        	    	android:id="@+id/tv_col2"
+        	    	android:layout_width="0px"
+        	    	android:layout_height="wrap_content"
+        	    	android:layout_weight="1"
+        	    	android:text="Nombre" 
+        	    />
+        	    
+        	    <TextView 
+        	    	android:id="@+id/tv_col3"
+        	    	android:layout_width="0px"
+        	    	android:layout_height="wrap_content"
+        	    	android:layout_weight="1"
+        	    	android:text="Apellido" 
+        	    />
+        	    
+        	    <TextView 
+        	    	android:id="@+id/tv_col4"
+        	    	android:layout_width="0px"
+        	    	android:layout_height="wrap_content"
+        	    	android:layout_weight="1"
+        	    	android:text="Eliminar" 
+        	    />
+        	    
+        	    
+        	</TableRow>
+        	
+    	</TableLayout>
+        
+    </ScrollView>
+
+</LinearLayout>
